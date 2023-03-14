@@ -50,13 +50,13 @@
   text-align: center;
 }
 
-label {
+.login-label {
   display: block;
   margin-top: 30px;
   font-size: 16px;
   font-weight: 500;
 }
-input {
+login-input {
   display: block;
   height: 50px;
   width: 100%;

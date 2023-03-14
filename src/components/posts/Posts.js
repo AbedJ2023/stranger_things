@@ -2,8 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { deletePost } from "../../api";
 import "./Posts.css";
-import Button from "@mui/material/Button";
-import { Paper } from "@mui/material";
+import { Paper, Button } from "@mui/material";
 import CreatePost from "./create-post/CreatePost";
 
 const Post = ({ posts, token, fetchPosts }) => {
@@ -106,19 +105,3 @@ const Post = ({ posts, token, fetchPosts }) => {
 };
 
 export default Post;
-
-{
-  /* <div>
-      <div className="posts-header">
-        <button className="create-Post-button">Create Post</button>
-        <div>
-          <input
-            type="text"
-            className="search-bar"
-            placeholder="Search Posts"
-          ></input>
-          <Button>Search</Button>
-        </div>
-      </div>
-    </div> */
-}

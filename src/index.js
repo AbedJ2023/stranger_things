@@ -12,6 +12,8 @@ import { getPosts, getUserDetails } from "./api";
 import SignUp from "./components/sign-up/SignUp";
 import SinglePost from "./components/posts/single-post/SinglePost";
 import CreatePost from "./components/posts/create-post/CreatePost";
+import EditPost from "./components/posts/edit-post/EditPost";
+import Profile from "./components/profile/Profile";
 
 const App = () => {
   const [posts, setPosts] = useState([]);
@@ -58,12 +60,16 @@ const App = () => {
 
   return (
     <div>
-      <Navbar />
+      <Navbar logout={logout} />
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route
           path="/posts"
           element={<Posts posts={posts} fetchPosts={fetchPosts} />}
+        />
+        <Route
+          path="/profile"
+          element={<Profile user={user} getMe={getMe} navigate={navigate} />}
         />
         <Route
           path="/login"
@@ -72,6 +78,18 @@ const App = () => {
         <Route
           path="/signUp"
           element={<SignUp setToken={setToken} navigate={navigate} />}
+        />
+        <Route
+          exact
+          path="/posts/edit-post/:id"
+          element={
+            <EditPost
+              token={token}
+              fetchPosts={fetchPosts}
+              posts={posts}
+              navigate={navigate}
+            />
+          }
         />
         <Route
           path="/posts/:id"

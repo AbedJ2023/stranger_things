@@ -1,0 +1,27 @@
+.create-post-form-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+
+.create-post-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-post-input {
+  background-color: white;
+  width: 150% !important;
+}
+
+@media screen and (max-width: 400px) {
+  .create-post-input {
+    width: 100% !important;
+    height: 90% !important;
+  }
+}

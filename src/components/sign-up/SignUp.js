@@ -38,8 +38,11 @@ const SignUp = ({ setToken, navigate }) => {
       >
         <h3>Sign UP Please!</h3>
 
-        <label htmlFor="username">Username</label>
+        <label className="login-label" htmlFor="username">
+          Username
+        </label>
         <input
+          className="login-input"
           type="text"
           placeholder="Enter Username"
           id="username"
@@ -47,8 +50,11 @@ const SignUp = ({ setToken, navigate }) => {
           value={username}
         />
 
-        <label htmlFor="password">Password</label>
+        <label className="login-label" htmlFor="password">
+          Password
+        </label>
         <input
+          className="login-input"
           type="password"
           placeholder="Password"
           id="password"

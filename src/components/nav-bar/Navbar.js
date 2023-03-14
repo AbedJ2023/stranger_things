@@ -2,7 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ logout }) => {
   return (
     <nav>
       <div className="brand">
@@ -16,7 +16,7 @@ const Navbar = () => {
           <Link to="posts">Posts</Link>
         </li>
         <li className="nav-item">
-          <a href="#">Profile</a>
+          <Link to="/profile">Profile</Link>
         </li>
         <li className="nav-item">
           <Link to="login">Login</Link>

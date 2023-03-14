@@ -34,14 +34,15 @@ const Login = ({ setToken, navigate }) => {
         onSubmit={(event) => {
           event.preventDefault();
           handleSubmit();
-          setUsername("");
-          setPassword("");
         }}
       >
         <h3>Welcome to Stranger's Things</h3>
 
-        <label htmlFor="username">Username</label>
+        <label className="login-label" htmlFor="username">
+          Username
+        </label>
         <input
+          className="login-input"
           type="text"
           placeholder="Enter Username"
           id="username"
@@ -49,8 +50,11 @@ const Login = ({ setToken, navigate }) => {
           value={username}
         />
 
-        <label htmlFor="password">Password</label>
+        <label className="login-label" htmlFor="password">
+          Password
+        </label>
         <input
+          className="login-input"
           type="password"
           placeholder="Password"
           id="password"
