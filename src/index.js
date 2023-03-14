@@ -11,6 +11,7 @@ import Login from "./components/login/Login";
 import { getPosts, getUserDetails } from "./api";
 import SignUp from "./components/sign-up/SignUp";
 import SinglePost from "./components/posts/single-post/SinglePost";
+import CreatePost from "./components/posts/create-post/CreatePost";
 
 const App = () => {
   const [posts, setPosts] = useState([]);
@@ -82,6 +83,10 @@ const App = () => {
               getMe={getMe}
             />
           }
+        />
+        <Route
+          path="/createPost"
+          element={<CreatePost fetchPosts={fetchPosts} navigate={navigate} />}
         />
       </Routes>
     </div>

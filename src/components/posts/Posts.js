@@ -4,6 +4,7 @@ import { deletePost } from "../../api";
 import "./Posts.css";
 import Button from "@mui/material/Button";
 import { Paper } from "@mui/material";
+import CreatePost from "./create-post/CreatePost";
 
 const Post = ({ posts, token, fetchPosts }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -29,7 +30,13 @@ const Post = ({ posts, token, fetchPosts }) => {
     <div>
       <div className="posts-header">
         <Button variant="outlined" className="create-Post-button">
-          Create Post
+          <Link
+            className="create-post-link"
+            to="/createPost"
+            element={<CreatePost />}
+          >
+            Create Post
+          </Link>
         </Button>
         <div>
           <input
@@ -71,7 +78,7 @@ const Post = ({ posts, token, fetchPosts }) => {
                 </Button>
               ) : (
                 <Button variant="outlined" className="view-button">
-                  <Link className="view-link" to={"/posts/${_id}"}>
+                  <Link className="view-link" to={`/posts/${_id}`}>
                     View
                   </Link>
                 </Button>

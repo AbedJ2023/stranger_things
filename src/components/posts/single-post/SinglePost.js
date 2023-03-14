@@ -1,5 +1,5 @@
 import { Paper } from "@mui/material";
-import { Button } from "bootstrap";
+import Button from "@mui/material/Button";
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import swal from "sweetalert";
@@ -41,7 +41,8 @@ const SinglePost = ({ posts, token }) => {
   const [activateMessage, setActivateMessage] = useState(false);
   const { id } = useParams();
 
-  const currentPost = posts.find((post) => String(post._id) === id);
+  const [currentPost] = posts.filter((post) => post._id === id);
+
   const { title, description, location, price, willDeliver } = currentPost;
 
   return (

@@ -28,6 +28,7 @@ const SignUp = ({ setToken, navigate }) => {
         <div className="shape"></div>
       </div>
       <form
+        className="signUp-form"
         onSubmit={(event) => {
           event.preventDefault();
           handleSubmit();
@@ -55,7 +56,9 @@ const SignUp = ({ setToken, navigate }) => {
           value={password}
         />
 
-        <button type="submit">Sign Up</button>
+        <button className="btn btn-primary" type="submit">
+          Sign Up
+        </button>
         <div className="signup">
           <div>Already have an account? </div>
           <Link to="/login" className="signUpLink">
