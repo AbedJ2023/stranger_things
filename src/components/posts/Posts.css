@@ -13,10 +13,6 @@
   text-decoration: none;
 }
 
-.view-button {
-  margin-left: 1% !important;
-}
-
 .posts-header {
   display: flex;
   justify-content: space-between;

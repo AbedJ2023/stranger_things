@@ -60,12 +60,14 @@ const App = () => {
 
   return (
     <div>
-      <Navbar logout={logout} />
+      <Navbar logout={logout} token={token} />
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route
           path="/posts"
-          element={<Posts posts={posts} fetchPosts={fetchPosts} />}
+          element={
+            <Posts posts={posts} fetchPosts={fetchPosts} token={token} />
+          }
         />
         <Route
           path="/profile"
