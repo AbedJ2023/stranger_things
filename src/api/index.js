@@ -133,7 +133,7 @@ export const updatePost = async ({
 
     const result = await response.json();
     return result;
-  } catch (ex) {
+  } catch (error) {
     console.log("error updating post");
   }
 };
@@ -150,7 +150,7 @@ export const createMessage = async ({ postID, token, message }) => {
         message,
       }),
     });
-  } catch (ex) {
+  } catch (error) {
     console.log("error creating message");
   }
 };

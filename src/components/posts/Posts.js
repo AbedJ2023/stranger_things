@@ -21,9 +21,9 @@ const Post = ({ posts, token, fetchPosts }) => {
 
   const postsToDisplay = posts.filter((post) => postMatches(post, searchTerm));
 
-  useEffect(() => {
-    fetchPosts();
-  }, [posts]);
+  // useEffect(() => {
+  //   fetchPosts();
+  // }, [posts]);
 
   return (
     <div>

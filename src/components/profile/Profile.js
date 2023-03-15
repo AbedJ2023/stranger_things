@@ -7,9 +7,9 @@ const Profile = ({ user, getMe }) => {
   const messages = user.messages;
   const userID = user._id;
 
-  useEffect(() => {
-    getMe();
-  }, [user]);
+  // useEffect(() => {
+  //   getMe();
+  // }, [user]);
 
   return (
     <div

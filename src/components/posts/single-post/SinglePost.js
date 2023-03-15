@@ -7,8 +7,6 @@ import { createMessage } from "../../../api";
 
 const SendMessage = ({ postID, token, navigate }) => {
   const [message, setMessage] = useState({ content: "" });
-  // we need 3 things to make this request
-  // Post-id, token, message object containing the content of the message
 
   const addMessage = async (ev) => {
     await createMessage({ postID, message, token });

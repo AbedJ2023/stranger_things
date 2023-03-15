@@ -5,7 +5,7 @@ import swal from "sweetalert";
 import { createPost } from "../../../api";
 import "./CreatePost.css";
 
-const CreatePost = ({ navigate, fetchPosts }) => {
+const CreatePost = ({ navigate, fetchPosts, setPosts, posts }) => {
   const token = window.localStorage.token;
 
   const [title, setTitle] = useState("");
@@ -24,7 +24,8 @@ const CreatePost = ({ navigate, fetchPosts }) => {
       willDeliver
     );
     if (results.success) {
-      fetchPosts();
+      setPosts([...posts, results.data.post]);
+
       navigate("/posts");
     } else {
       swal("Please register or login to create a post!");

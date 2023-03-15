@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import swal from "sweetalert";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import Navbar from "./components/nav-bar/Navbar";
@@ -106,7 +105,14 @@ const App = () => {
         />
         <Route
           path="/createPost"
-          element={<CreatePost fetchPosts={fetchPosts} navigate={navigate} />}
+          element={
+            <CreatePost
+              fetchPosts={fetchPosts}
+              navigate={navigate}
+              setPosts={setPosts}
+              posts={posts}
+            />
+          }
         />
       </Routes>
     </div>
